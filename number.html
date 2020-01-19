@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test 3</title>
+</head>
+
+	<script>
+
+            function calc()
+            {
+                var n1 = parseFloat(document.getElementById('n1').value);
+                var n2 = parseFloat(document.getElementById('n2').value);
+   
+
+                var oper = document.getElementById('operators').value;
+
+                if(oper ==='+')
+                {
+                    document.getElementById('result').value = n1+n2;
+                }
+
+                if(oper === '-')
+                {
+                    document.getElementById('result').value = n1-n2;
+                }
+
+                if(oper === '/')
+                {
+                    document.getElementById('result').value = n1/n2;
+                }
+
+                if(oper === 'X')
+                {
+                    document.getElementById('result').value = n1*n2;
+                }
+            }
+
+        </script>
+
+
+
+        <style>
+        	body{
+        		background-color: lightblue;
+        	}
+
+        	#title{
+        		text-align: center;
+        		background-color: red;
+        	}
+        	.container{
+        		margin-left:30%; 
+        		width: 50%;
+        		border:2px solid black;
+        		margin-top: 200px;
+        		text-align: center;
+        		background-color: blue;
+
+
+        	}
+
+        </style>
+<body>
+
+	<h1 id="title"> Made by Mohammed Elhachimi</h1>
+	<hr>
+        <div class="container">
+
+        <input type="text" id="n1"/><br/><br/>
+        <input type="text" id="n2"/><br/><br/>
+    
+
+        <select id="operators">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="X">X</option>
+        </select>
+
+        <button onclick="calc();">RESULTS</button>
+        <input type="text" id="result"/>
+    </div>
+
+</body>
+</html>
